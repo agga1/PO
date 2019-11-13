@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GrassFieldTest {
 
-        private List<Grass> grasses = new ArrayList<>();
+        private List<Grass> grasses;
         private IWorldMap map = new GrassField(4);
 
         @BeforeEach

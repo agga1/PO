@@ -16,9 +16,8 @@ import static java.lang.System.out;
 public abstract class AbstractWorldMap implements IWorldMap {
     protected Map<Vector2d, Animal> animalMap= new HashMap<>();
     protected List<Animal> animals = new ArrayList<>();
-    public boolean place(Animal animal) throws IllegalArgumentException{
+    public boolean place(Animal animal) {
         if (this.isOccupied(animal.getPosition())){
-//            throw new IllegalArgumentException(animal.getPosition() + " is already Occupied");
             return false;
         }
         if(!this.canMoveTo(animal.getPosition())) return false;

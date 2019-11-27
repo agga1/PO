@@ -1,6 +1,7 @@
 package agh.cs.lab7;
 
 import agh.cs.lab2.Vector2d;
+import agh.cs.lab3.Animal;
 
 import java.util.Comparator;
 import java.util.TreeSet;
@@ -22,6 +23,9 @@ public class MapBoundary implements IPositionChangeObserver {
     public void addPosition(Vector2d position) {
         xs.add(position);
         ys.add(position);
+    }
+    public void addAnimal(Animal animal){
+        animal.addObserver(this);
     }
 
     public void removePosition(Vector2d position) {

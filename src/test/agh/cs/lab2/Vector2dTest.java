@@ -1,8 +1,8 @@
 package agh.cs.lab2;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.Assert.*;
 
 public class Vector2dTest {
     private Vector2d v1_1 = new Vector2d(1, 1);

@@ -52,6 +52,7 @@ public class GrassField extends AbstractWorldMap{
         if (super.place(animal)) {
             mapBoundary.addPosition(animal.getPosition());
             animal.addObserver(mapBoundary);
+//             mapBoundary.addAnimal(animal);
         }
         return true;
     }

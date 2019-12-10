@@ -17,7 +17,6 @@ public class WorldMap implements IWorldMap {
     private AnimalHashMap animalMap = new AnimalHashMap();
     private List<JungleAnimal> animals = new ArrayList<>();
     private MapVisualizer mapVisualizer = new MapVisualizer(this);
-    private Set <Vector2d> occupiedSpace = new HashSet<>();
     private int day = 0;
 
     public WorldMap(int width,int height, double jungleRatio){
@@ -85,6 +84,7 @@ public class WorldMap implements IWorldMap {
         // move all animals
         animals.forEach(JungleAnimal::move);
         // iterate over occupiedSpace set
+//        occupiedSpace.forEach();
         // eat grass
         // add new grass
         addGrassOnJungle();
@@ -124,7 +124,8 @@ public class WorldMap implements IWorldMap {
     }
 
     private void removeDeadAnimal(JungleAnimal animal){
-        animalMap.removeAnimal(animal, animal.getPosition());
+        Vector2d pos = animal.getPosition();
+        animalMap.removeAnimal(animal, pos);
         this.animals.remove(animal);
     }
     public String toString(){
